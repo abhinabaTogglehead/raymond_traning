@@ -36,6 +36,7 @@
     line-height: 1.905em;
     max-width: 94%;
     text-align: justify;
+    // word-wrap: break-word;
     width: 100%;
   }
   img {
@@ -54,14 +55,14 @@
       font-size: 1.25em;
     }
     h3 {
-      font-size: 2.75em;
+      font-size: 3.63em;
     }
   }
 }
 @media (max-width: 1194px) {
   .about {
     h3 {
-      font-size: 2.75em;
+      font-size: 3.63em;
     }
     article {
       font-size: 1.25em;
@@ -73,12 +74,12 @@
   .about {
     flex-direction: column;
     h3 {
-      font-size: 2.75em;
+      font-size: 2.8em;
     }
     article {
       max-width: 100%;
       width: 100%;
-      font-size: 0.875em;
+      font-size: 1.25em;
     }
     div {
       width: 100%;
