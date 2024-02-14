@@ -1,0 +1,101 @@
+$color-white: #ffffff;
+$color-primary: #231f20;
+$color-secondary: #333333;
+$color-red: #ed193a;
+$color-231f20: #231f20;
+$color-ED193A: #ed193a;
+$color-ffffff: #ffffff;
+$color-333333: #333333;
+
+
+.App {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 6em;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+// *:focus,
+input:focus,
+textarea:focus,
+form-control:focus {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+@media (min-width: 2560px) {
+  .App {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1921px) {
+  .App {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1920px) {
+  .App {
+    max-width: 80%;
+  }
+}
+@media (max-width: 1919px) {
+  .App {
+    max-width: 80%;
+  }
+}
+@media (max-width: 1536px) {
+  .App {
+    max-width: 85%;
+  }
+}
+@media (max-width: 1440px) {
+  .App {
+    max-width: 85%;
+  }
+}
+@media (max-width: 1366px) {
+  .App {
+    max-width: 85%;
+  }
+}
+@media (max-width: 1280px) {
+  .App {
+    max-width: 85%;
+  }
+}
+@media (max-width: 1194px) {
+  .App {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 834px) {
+  .App {
+    max-width: 98%;
+  }
+}

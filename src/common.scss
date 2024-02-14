@@ -1,0 +1,533 @@
+/*============================
+    General css start Here    
+============================*/
+$color-white: #ffffff;
+$color-primary: #231f20;
+$color-secondary: #333333;
+$color-red: #ed193a;
+$color-231f20: #231f20;
+$color-ED193A: #ed193a;
+$color-ffffff: #ffffff;
+$color-333333: #333333;
+
+.dummy {
+  min-height: 100vh;
+}
+img {
+  object-fit: cover;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #333333;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $color-ED193A;
+}
+// .dummy {
+//   min-height: 100vh;
+//   background-color: lightcoral;
+// }
+*,
+// *:focus,
+input:focus,
+textarea:focus,
+form-control:focus {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,
+a:visited,
+a:active,
+a:focus {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-shadow: none;
+  outline-style: none;
+  -moz-outline-style: none;
+}
+a:active,
+a:focus,
+li:focus,
+li:active {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+// html,
+// body,
+// #root {
+//   height: 100%;
+// }
+img {
+  height: auto;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+a {
+  text-decoration: none;
+  color: $color-primary;
+  &:hover {
+    text-decoration: none;
+    color: $color-primary;
+    outline: none;
+  }
+}
+:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}
+button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+// li {
+//   list-style-type: none;
+// }
+.custom-li {
+  list-style-type: none;
+}
+[type="submit"],
+button,
+html [type="button"] {
+  -webkit-appearance: none;
+}
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgb(0 123 255 / 25%);
+}
+@media (min-width: 2560px) {
+  body {
+    font-size: 18px;
+  }
+  .my_container {
+    max-width: 2174.7px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .my_container {
+    max-width: 1631px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+  }
+}
+@media (max-width: 1920px) {
+  body {
+    font-size: 15px;
+  }
+  .my_container {
+    max-width: 1631px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1919px) {
+  body {
+    font-size: 14px;
+  }
+  .my_container {
+    max-width: 1304.8px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 1536px) {
+  body {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1440px) {
+  body {
+    font-size: 10.5px;
+  }
+  .my_container {
+    max-width: 1223.25px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1366px) {
+  body {
+    font-size: 10px;
+    // font-size: 11px;
+  }
+  .my_container {
+    max-width: 1160.38px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    font-size: 9.5px;
+  }
+  .my_container {
+    max-width: 1087.33px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1194px) {
+  body {
+    font-size: 10px;
+  }
+  .my_container {
+    max-width: 1014.27px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 834px) {
+  body {
+    font-size: 10px;
+  }
+  .my_container {
+    max-width: 708.46px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+/*============================
+    General css end Here    
+============================*/
+/*============================
+    MIXINS start Here    
+============================*/
+@mixin textStyles($fontSize, $lineHeight, $letterSpacing) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+@mixin H90112 {
+  @include textStyles(5.625em, 1.5em, 0px);
+  @include poppinsSemiBold;
+  opacity: 1;
+}
+@mixin H75150 {
+  @include textStyles(4.688em, 1.5em, 0px);
+  @include poppinsSemiBold;
+  opacity: 1;
+}
+
+@mixin H501505 {
+  @include textStyles(3.125em, 1.5em, 0.5px);
+  @include poppinsSemiBold;
+  opacity: 1;
+}
+
+@mixin Breadcrumb {
+  @include textStyles(1.125em, 1.5em, 0.18px);
+  @include poppinsSemiBold;
+  opacity: 0.5;
+}
+
+@mixin D21180 {
+  @include textStyles(1.45em, 1.8em, 0px);
+  @include poppinsSemiBold;
+  opacity: 0.9;
+  text-align: justify;
+   
+}
+@mixin D18180 {
+  @include textStyles(1.4em, 1.8em, 0px);
+  @include poppinsRegular;
+  opacity: 0.9;
+  text-align: justify;
+   
+}
+@mixin CardText {
+  @include textStyles(1.5em, 1.8em, 0px);
+  @include poppinsMedium;
+  opacity: 1;
+  text-align: justify;
+   
+}
+
+/*============================
+    MIXINS end Here    
+============================*/
+
+// fonts mixin start
+@mixin poppinsLight {
+  font-family: "Poppins";
+  font-weight: 300;
+}
+@mixin poppinsRegular {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+@mixin poppinsMedium {
+  font-family: "Poppins";
+  font-weight: 500;
+}
+@mixin poppinsSemiBold {
+  font-family: "Poppins";
+  font-weight: 600;
+}
+@mixin poppinsBold {
+  font-family: "Poppins";
+  font-weight: 700;
+}
+// fonts mixin end
+
+// <--------------------------------common styles------------------------------------>
+// vijay common css
+// .outer_span{
+//   overflow: hidden;
+//   display: inline-block;
+// }
+// .inner_span{
+//   display: inline-block;
+//   transform: translateY(100%);
+// }
+// @keyframes letterAnim {
+//   0% {
+//     transform: translateY(100%);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+@keyframes spanAnim {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.err_message {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2em;
+  color: $color-231f20;
+  opacity: 0.9;
+  @include poppinsSemiBold;
+}
+@mixin f75L95 {
+  font-size: 4.688em;
+  line-height: 1.267em;
+  color: $color-231f20;
+  @include poppinsSemiBold;
+  text-transform: capitalize;
+}
+@mixin f21L40 {
+  font-size: 1.313em;
+  line-height: 1.905em;
+  color: $color-231f20;
+  opacity: 0.9;
+  @include poppinsSemiBold;
+}
+
+.banner_desc_style {
+  font-size: 1.4em;
+  line-height: 1.905em;
+  color: $color-231f20;
+  @include poppinsSemiBold;
+  text-align: justify;
+   
+}
+.section_name {
+  font-size: 1.4em;
+  line-height: 1.667em;
+  letter-spacing: 0.18px;
+  color: $color-333333;
+  @include poppinsSemiBold;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.section_title {
+  font-size: 3.125em;
+  line-height: 1.6em;
+  letter-spacing: 0.5px;
+  color: $color-231f20;
+  @include poppinsSemiBold;
+  text-transform: capitalize;
+}
+.section_desc {
+  // font-size: 1.125em;
+  // line-height: 1.944em;
+  font-size: 1.4em;
+  line-height: 1.8em;
+  color: $color-231f20;
+  @include poppinsRegular;
+  opacity: 0.9;
+  text-align: justify;
+   
+}
+.navigation_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .left_btn {
+    margin-right: 2.5em;
+    transition: 0.4s opacity;
+  }
+  .right_btn {
+    margin-left: 2.5em;
+    transition: 0.4s opacity;
+  }
+}
+.right_btn.swiper-button-disabled,
+.left_btn.swiper-button-disabled {
+  opacity: 0.5;
+  // pointer-events: none;
+}
+// end of vijay common css
+
+@media (max-width: 1279px) {
+  [data-aos^="fade"][data-aos^="fade"] {
+    opacity: 1 !important;
+  }
+  [data-aos="fade-right"] {
+    transform: translate3d(0, 0, 0) !important;
+  }
+  [data-aos="fade-left"] {
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+@media (max-width: 767px) {
+  // vijay common css
+  // @mixin mbf28L40{
+  //   font-size: 2.8em;
+  //   line-height: 1.429em;
+  //   letter-spacing: 0.28px;
+  // }
+  // @mixin mbf16L28{
+  //   font-size: 1.6em;
+  //   line-height: 0.571em;
+  // }
+
+  .banner_desc_style {
+    font-size: 1.4em;
+    line-height: 1.786em;
+  }
+  .section_name {
+    font-size: 1.4em;
+    line-height: 2.143em;
+    letter-spacing: 0.14px;
+  }
+  .section_title {
+    font-size: 2.8em;
+    line-height: 1.429em;
+    letter-spacing: 0.28px;
+  }
+  .section_desc {
+    font-size: 1.4em;
+    line-height: 1.786em;
+  }
+  .navigation_wrapper {
+    .left_btn {
+      margin-right: 3em;
+    }
+    .right_btn {
+      margin-left: 3em;
+    }
+  }
+  // end of vijay common css
+  // .extra_space_issue {
+  //   margin-top: -3em;
+  // }
+}
+
+// end of common styles
+
+/*============================
+    MIXINS end Here    
+============================*/
+/*============================
+    common css start Here    
+============================*/
+
+/*============================
+    common css end Here    
+============================*/
+
+/*============================
+    Desktop CSS Starts Here   
+=============================*/
+
+// @media(min-width:  1280px) {}
+// @media(min-width: 2560px) {}
+// @media(max-width: 1919px) {}
+// @media(max-width: 1536px) {}
+// @media(max-width: 1440px) {}
+// @media(max-width: 1366px) {}
+// @media(max-width: 1280px) {}
+/*============================
+Desktop CSS Ends Here   
+=============================*/
+
+/*================================
+Ipad/Mobile CSS Starts Here   
+================================*/
+// @media(max-width: 1194px) {}
+// @media (max-width: 1023px) {}
+// @media(max-width: 834px) {}
+// @media (max-width: 767px) {}
+// @media(max-width: 375px) {}
+// @media(max-width: 320px) {}
+/*================================
+  Ipad/Mobile CSS Ends Here   
+  ================================*/
