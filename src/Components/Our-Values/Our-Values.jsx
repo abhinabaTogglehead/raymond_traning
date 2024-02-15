@@ -2,6 +2,7 @@ import "./Our-Values.scss";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import { image1, image2, image3 } from "../Image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -22,7 +23,7 @@ function OurValues() {
             prevEl: ".swiper-button-prev-custom",
           }}
           mousewheel={true}
-          spaceBetween={-20}
+          spaceBetween={-13.2}
           keyboard={true}
           slidesPerView={3}
           modules={[Navigation, Mousewheel, Keyboard]}
@@ -40,10 +41,7 @@ function OurValues() {
           }}
         >
           <SwiperSlide>
-            <img
-              src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTUP9cyS5eajlO_WE5RPRItKzb9vw_B3J16UcKskI-NIZZrGbQK"
-              alt="first image"
-            />
+            <img src={image1} alt="first image" />
             <article>
               The trust bestowed on Raymond by its stakeholders has enabled it
               to be a market leader. We believe that conducting business in a
@@ -52,10 +50,7 @@ function OurValues() {
             </article>
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjI8tU-E6DAGfNwYWchs-TU3gDCha30xzDlKxK06kx8w4WwDli"
-              alt=""
-            />
+            <img src={image2} alt=" sec image" />
             <article>
               An iconic brand that has been at the helm of innovation, Raymond
               has always been recognised for its high-quality product offerings
@@ -65,10 +60,7 @@ function OurValues() {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <img
-              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ6jk32hQynwOProqi9OlkXcYWIYELalYRDAGAhGI86ulIWkUX5"
-              alt="thred image"
-            />
+            <img src={image3} alt="thred image" />
             <article>
               At Raymond, we believe in achieving excellence in all we do. Be it
               crafting world-class offerings, implementing industry best
