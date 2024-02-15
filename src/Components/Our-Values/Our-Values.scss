@@ -8,6 +8,7 @@
     font-weight: 600;
     text-transform: capitalize;
     padding-bottom: 2em;
+    font-style: bold;
   }
   .swiper-container {
     width: 100%;
@@ -77,7 +78,13 @@
   }
 }
 
-@media (max-width: 1194px) {
+// @media (max-width: 1194px) {
+//   .our-values .swiper-button-container {
+//     display: flex;
+//   }
+// }
+
+@media (max-width: 1023px) {
   .our-values .swiper-button-container {
     display: flex;
   }
