@@ -22,7 +22,7 @@ function OurValues() {
             prevEl: ".swiper-button-prev-custom",
           }}
           mousewheel={true}
-          spaceBetween={20}
+          spaceBetween={0}
           keyboard={true}
           slidesPerView={3}
           modules={[Navigation, Mousewheel, Keyboard]}
