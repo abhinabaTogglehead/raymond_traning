@@ -1,5 +1,5 @@
 import "./Our-Values.scss";
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import { image1, image2, image3 } from "../Image";
@@ -12,12 +12,16 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Mousewheel, Keyboard } from "swiper/modules";
 function OurValues() {
+  const swiperRef = useRef(null);
   return (
     <div className="our-values">
       <h2>Our Values</h2>
       <div className="swiper-container">
         <Swiper
           cssMode={true}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           navigation={{
             nextEl: ".swiper-button-next-custom",
             prevEl: ".swiper-button-prev-custom",
@@ -70,11 +74,19 @@ function OurValues() {
         </Swiper>
       </div>
       <div className="swiper-button-container">
-        <button className="swiper-button-prev-custom">
+        <button
+          className="swiper-button-prev-custom"
+          disabled={!swiperRef.current || swiperRef.current.isBeginning}
+          onClick={() => swiperRef.current.slidePrev()}
+        >
           <FaLongArrowAltLeft />
           PREVIOUS
         </button>
-        <button className="swiper-button-next-custom">
+        <button
+          className="swiper-button-next-custom"
+          disabled={!swiperRef.current || swiperRef.current.isEnd}
+          onClick={() => swiperRef.current.slideNext()}
+        >
           NEXT
           <FaLongArrowAltRight />
         </button>

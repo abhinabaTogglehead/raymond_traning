@@ -91,4 +91,15 @@
   .our-values .swiper-button-container {
     display: flex;
   }
+ .our-values .swiper-button-prev-custom,
+ .our-values .swiper-button-next-custom {
+    // ... existing styles
+
+    // Add styles for disabled state
+    &:disabled {
+      color: black;
+      opacity: 0.8;
+      cursor: default; // Optional: change cursor to indicate non-interactive element
+    }
+  }
 }
