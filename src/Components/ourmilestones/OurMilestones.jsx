@@ -42,6 +42,9 @@ function OurMilestones() {
               onClick={() => handleIndex(index)}
             >
               {range}
+              <div
+                className={`underline ${activeYear[index] ? "active" : ""}`}
+              ></div>
             </div>
           </React.Fragment>
         ))}
@@ -52,7 +55,11 @@ function OurMilestones() {
             {activeYear[index] && section}
           </React.Fragment>
         ))}
-        <img className="our-milestone-image" src={Ourmilestonesimg1} alt="aour image" />
+        <img
+          className="our-milestone-image"
+          src={Ourmilestonesimg1}
+          alt="aour image"
+        />
       </div>
     </div>
   );

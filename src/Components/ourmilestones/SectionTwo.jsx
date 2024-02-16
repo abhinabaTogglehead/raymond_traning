@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
 
 function SectionTwo() {
   const year = [2008, 2002, 2003, 2005, 2006, 2006, 2008, 2002];
@@ -22,12 +22,16 @@ function SectionTwo() {
   return (
     <Swiper
       slidesPerView={3}
-      spaceBetween={100}
-      freeMode={true}
+      spaceBetween={70}
+      // freeMode={true}
+      navigation={{
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+      }}
       pagination={{
         clickable: true,
       }}
-      modules={[FreeMode, Pagination]}
+      modules={[FreeMode, Pagination, Navigation]}
       breakpoints={{
         0: {
           slidesPerView: 1,
@@ -47,6 +51,10 @@ function SectionTwo() {
           <p>{content[index]}</p>
         </SwiperSlide>
       ))}
+      <div className="button-container">
+        <button className="swiper-button-prev-custom">PREV</button>
+        <button className="swiper-button-next-custom">NEXT</button>
+      </div>
     </Swiper>
   );
 }

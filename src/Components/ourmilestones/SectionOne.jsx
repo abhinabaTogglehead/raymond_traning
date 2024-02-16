@@ -5,7 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+
 function SectionOne() {
   const year = [
     1999, 1925, 1944, 1950, 1952, 1958, 1958, 1960, 1967, 1968, 1979, 1980,
@@ -37,12 +39,16 @@ function SectionOne() {
   return (
     <Swiper
       slidesPerView={3}
-      spaceBetween={100}
-      freeMode={true}
+      spaceBetween={70}
+      // freeMode={true}
+      navigation={{
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+      }}
       pagination={{
         clickable: true,
       }}
-      modules={[FreeMode, Pagination]}
+      modules={[FreeMode, Pagination, Navigation]}
       breakpoints={{
         0: {
           slidesPerView: 1,
@@ -62,6 +68,16 @@ function SectionOne() {
           <p>{content[index]}</p>
         </SwiperSlide>
       ))}
+      <div className="button-container">
+        <button className="swiper-button-prev-custom" disabled={true}>
+          <FaLongArrowAltLeft />
+          PREV
+        </button>
+        <button className="swiper-button-next-custom" disabled={true}>
+          NEXT
+          <FaLongArrowAltRight />
+        </button>
+      </div>
     </Swiper>
   );
 }

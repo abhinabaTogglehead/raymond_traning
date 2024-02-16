@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
 
 function SectionFour() {
   const year = [2020, 2018, 2018, 2019, 2019, 2019, 2020, 2018];
@@ -23,12 +23,16 @@ function SectionFour() {
   return (
     <Swiper
       slidesPerView={3}
-      spaceBetween={100}
-      freeMode={true}
+      spaceBetween={70}
+      // freeMode={true}
+      navigation={{
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }}
       pagination={{
         clickable: true,
       }}
-      modules={[FreeMode, Pagination]}
+      modules={[FreeMode, Pagination, Navigation]}
       breakpoints={{
         0: {
           slidesPerView: 1,
@@ -48,6 +52,10 @@ function SectionFour() {
           <p>{content[index]}</p>
         </SwiperSlide>
       ))}
+      <div className="button-container">
+        <button className="swiper-button-prev-custom">PREV</button>
+        <button className="swiper-button-next-custom">NEXT</button>
+      </div>
     </Swiper>
   );
 }
