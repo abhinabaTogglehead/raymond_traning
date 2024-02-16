@@ -87,11 +87,11 @@
 
       // Style the bullet (dot) elements
       .swiper-pagination-bullet {
-        width: 10px; // Width of the bullet
-        height: 10px; // Height of the bullet
+        width: 20px; // Width of the bullet
+        height: 2px; // Height of the bullet
         background-color: transparent; // Make bullets transparent by default
         border: 2px solid white; // Border color for the bullets
-        border-radius: 50%; // Make them rounded
+        border-radius: 20%; // Make them rounded
         opacity: 0.5; // Lower opacity for non-active bullets
         transition: transform 0.3s, background-color 0.3s; // Smooth transitions for effects
       }
