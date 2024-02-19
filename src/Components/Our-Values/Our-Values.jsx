@@ -23,11 +23,11 @@ function OurValues() {
             swiperRef.current = swiper;
           }}
           navigation={{
-            nextEl: ".swiper-button-next-custom",
-            prevEl: ".swiper-button-prev-custom",
+            nextEl: ".swiper-button-next-custom-2",
+            prevEl: ".swiper-button-prev-custom-2",
           }}
           mousewheel={true}
-          spaceBetween={-13.2}
+          spaceBetween={-11.2}
           keyboard={true}
           slidesPerView={3}
           modules={[Navigation, Mousewheel, Keyboard]}
@@ -75,7 +75,7 @@ function OurValues() {
       </div>
       <div className="swiper-button-container">
         <button
-          className="swiper-button-prev-custom"
+          className="swiper-button-prev-custom-2"
           disabled={!swiperRef.current || swiperRef.current.isBeginning}
           onClick={() => swiperRef.current.slidePrev()}
         >
@@ -83,7 +83,7 @@ function OurValues() {
           PREVIOUS
         </button>
         <button
-          className="swiper-button-next-custom"
+          className="swiper-button-next-custom-2"
           disabled={!swiperRef.current || swiperRef.current.isEnd}
           onClick={() => swiperRef.current.slideNext()}
         >

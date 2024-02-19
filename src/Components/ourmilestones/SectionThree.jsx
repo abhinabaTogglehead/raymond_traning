@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 
 function SectionThree() {
   const year = [2017, 2011, 2014, 2016, 2016, 2016, 2016, 2017, 2017, 2011];
@@ -54,8 +55,14 @@ function SectionThree() {
         </SwiperSlide>
       ))}
       <div className="button-container">
-        <button className="swiper-button-prev-custom">PREV</button>
-        <button className="swiper-button-next-custom">NEXT</button>
+        <button className="swiper-button-prev-custom" disabled={true}>
+          <FaLongArrowAltLeft />
+          PREV
+        </button>
+        <button className="swiper-button-next-custom" disabled={true}>
+          NEXT
+          <FaLongArrowAltRight />
+        </button>
       </div>
     </Swiper>
   );

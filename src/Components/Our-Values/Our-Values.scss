@@ -57,7 +57,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    .swiper-button-prev-custom {
+    .swiper-button-prev-custom-2 {
       font-weight: 600;
       font-size: 1.5em;
       color: #ed193a;
@@ -68,7 +68,7 @@
       align-items: center;
       justify-content: center;
     }
-    .swiper-button-next-custom {
+    .swiper-button-next-custom-2 {
       font-weight: 600;
       font-size: 1.5em;
       color: #ed193a;
@@ -91,11 +91,8 @@
   .our-values .swiper-button-container {
     display: flex;
   }
- .our-values .swiper-button-prev-custom,
- .our-values .swiper-button-next-custom {
-    // ... existing styles
-
-    // Add styles for disabled state
+  .our-values .swiper-button-prev-custom-2,
+  .our-values .swiper-button-next-custom-2 {
     &:disabled {
       color: black;
       opacity: 0.8;

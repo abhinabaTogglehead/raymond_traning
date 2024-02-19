@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 
 function SectionFour() {
   const year = [2020, 2018, 2018, 2019, 2019, 2019, 2020, 2018];
@@ -26,8 +27,8 @@ function SectionFour() {
       spaceBetween={70}
       // freeMode={true}
       navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
       }}
       pagination={{
         clickable: true,
@@ -53,8 +54,14 @@ function SectionFour() {
         </SwiperSlide>
       ))}
       <div className="button-container">
-        <button className="swiper-button-prev-custom">PREV</button>
-        <button className="swiper-button-next-custom">NEXT</button>
+        <button className="swiper-button-prev-custom" disabled={true}>
+          <FaLongArrowAltLeft />
+          PREV
+        </button>
+        <button className="swiper-button-next-custom" disabled={true}>
+          NEXT
+          <FaLongArrowAltRight />
+        </button>
       </div>
     </Swiper>
   );
